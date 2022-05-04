@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- 부트스트랩 : css, js -->
+  <!-- 부트스트랩 사용법 css : 출처 : https://getbootstrap.com/docs/5.1/getting-started/introduction/-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+<body>
+    <!-- 버튼1 : 아이디 입력하세요 -->
+    <!-- 버튼2 : 비밀번호 입력하세요 -->
+    <div class="alert-box" id="alert">
+      <p id="title">아이디 입력하세요.</p>
+      <button id="close">닫기</button>
+    </div>
+
+    <button onclick="알림창1('아이디를 입력하세요.', 'block')">버튼1</button>
+    <button onclick="알림창1('비밀번호를 입력하세요', 'block')">버튼2</button>
+   
+</body>
+
+  <!-- 부트스트랩 사용법 js : 출처 : https://getbootstrap.com/docs/5.1/getting-started/introduction/-->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>   -->
+
+<script>
+
+// close 아이디를 클릭했을 때 function을 실행시켜주세요.
+  document.getElementById('close').addEventListener('click', function(
+  ){
+    document.getElementById('alert').style.display = 'none';
+  })
+
+  function 알림창1(구멍1, 구멍2) {
+
+    // 1.제목을 바꿈 : p태그를 아이디 입력으로 바꿈
+    document.getElementById('title').innerHTML = 구멍1;
+
+    // 2.띄움
+    document.getElementById('alert').style.display = 구멍2;
+
+  }
+</script>
+</html>

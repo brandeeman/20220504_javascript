@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- 버튼1 : 아이디 입력하세요 -->
+    <!-- 버튼2 : 비밀번호 입력하세요 -->
+    <div class="alert-box" id="alert">
+      <p id="title">아이디 입력하세요.</p>
+      <button id="close">닫기</button>
+    </div>
+
+    <button onclick="알림창1('아이디를 입력하세요.', 'block')">버튼1</button>
+    <button onclick="알림창1('비밀번호를 입력하세요', 'block')">버튼2</button>
+   
+</body>
+
+<script>
+
+// getElementById : 이런 걸 selector라고 함
+// 이벤트 종류들 : click, keydown, scroll, mouseover(마우스를 가져다 대었을 때)
+
+// close 아이디를 클릭했을 때 function을 실행시켜주세요.
+  document.getElementById('close').addEventListener('click', function(
+  ){
+    document.getElementById('alert').style.display = 'none';
+  })
+
+  function 알림창1(구멍1, 구멍2) {
+
+    // 1.제목을 바꿈 : p태그를 아이디 입력으로 바꿈
+    document.getElementById('title').innerHTML = 구멍1;
+
+    // 2.띄움
+    document.getElementById('alert').style.display = 구멍2;
+
+  }
+</script>
+</html>

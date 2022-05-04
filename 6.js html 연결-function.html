@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="alert-box" id="alert">알림창임
+      <br>
+      <button onclick="document.getElementById('alert').style.display ='none';">닫기</button>
+    </div>
+
+    <!-- id로 버튼 연결 -->
+    <!-- onclick : 클릭시 작동 -->
+    <!-- 목적 : alert 박스 보여주셈 -->
+    <button onclick="작명()">버튼</button>
+
+  </body>
+
+  <script>
+  // function : 긴 코드를 작명으로 축약
+  function 작명(){
+    "document.getElementById('alert').style.display = 'block';"
+  }
+  </script>
+
+</html>

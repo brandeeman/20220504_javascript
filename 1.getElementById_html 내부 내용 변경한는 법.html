@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="hello">안녕하세요</h1>
+    <h1 id="hi">JS 초보에요</h1>
+  </body>
+  <script>
+    // getElementById : html 내부 내용 변경한는 법
+    // 문법 : document.getElementById(di 내용).무엇을 = "어떻게";
+    // 많은 방법이 있음
+    // document : html 문서의
+    //. : ~의
+    // getElementById : html 요소를 가져와 주세요.
+    // innerHtml : 그 안의 Html
+    // = : 오른쪽 것을 왼쪽에 집어넣어주세요
+
+    document.getElementById("hello").innerHTML = "안녕";
+    document.getElementById("hello").style.color = "red";
+    document.getElementById("hello").style.fontSize = "16px";
+
+    // document.getElementById('hello').src = 'url 주소';
+
+    document.getElementById("hi").innerHTML = "JS 고수에요.";
+  </script>
+</html>

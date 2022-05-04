@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- 2.getElementsByClassName -->
+  <!-- 클래스 명으로 찾아 javascript와 연결 -->
+
+    <!-- 버튼1 : 아이디 입력하세요 -->
+    <!-- 버튼2 : 비밀번호 입력하세요 -->
+    <div class="alert-box" id="alert">
+      <p class="title1">아이디 입력하세요.</p>
+      <button class="title1" onclick="알림창1('사라짐','none')">닫기</button>
+    </div>
+
+    <button onclick="알림창1('아이디를 입력하세요.', 'block')">버튼1</button>
+    <button onclick="알림창1('비밀번호를 입력하세요', 'block')">버튼2</button>
+   
+</body>
+
+<script>
+  function 알림창1(구멍1, 구멍2) {
+
+    // 1.제목을 바꿈 : p태그를 아이디 입력으로 바꿈
+    document.getElementsByClassName('title1')[0].innerHTML = 구멍1;
+
+    // 2.띄움
+    document.getElementById('alert').style.display = 구멍2;
+  }
+</script>
+</html>

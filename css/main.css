@@ -1,0 +1,106 @@
+:root{
+  /* bootstrap 사용했을 때 스크롤바가 부드럽게 이동하는 것 정상으로 돌려줌 */
+  scroll-behavior: auto;
+}
+
+/* alert css */
+.alert-box {
+  /* 안 보임 */
+  display: none;
+  /* 보임 */
+  /* display : block; */
+
+  background-color: skyblue;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+}
+
+.list-group {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* 애니메이션 사용법 */
+.black-bg {
+  /* 아예 숨김 */
+  /* display: none; */
+
+  /* display : none이랑 똑같은 것 : 애니메이션 줄 때 사용 */
+  /* 모습만 숨김 */
+  visibility: hidden;
+
+  position: fixed;
+  /* z-index : 창을 순서대로 배치 */
+  z-index: 5;
+
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  padding: 30px;
+
+  /* 투명도 */
+  opacity: 0;
+  /* opacity : 0; 아예 안 보임 */
+  /* opacity : 0.5; */
+  /* opacity : 1; */
+
+  /* 모든 속성이 1초에 걸쳐 변경되어라 */
+  transition: all 1s;
+}
+
+.show-modal {
+  /* display: block; */
+  visibility: visible;
+  opacity: 1;
+}
+
+.white-bg {
+  background: white;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+button {
+  width: 100px;
+  height: 100px;
+}
+
+.slide-container {
+  /* vw : 브라우저 폭. 100vw - 꽉참 */
+  width: 300vw;
+
+  /* margin-left와 같은 말 */
+  /* margin-left: -100vw; */
+  /* transform: translateX(100vw); */
+  transition: all 1s;
+}
+
+.slide-box {
+  width: 100vw;
+
+  /* 이미지 가로로 배치 */
+  float: left;
+}
+
+.slide-box img {
+  /* 이미지 꽉 차게 */
+  width: 100%;
+}
+
+.navbar{
+  /* 스크롤 내려도 고정 */
+  position: fixed;
+
+  width: 100%;
+  z-index: 5;
+}
