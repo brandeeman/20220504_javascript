@@ -37,31 +37,34 @@
           </div>
         </nav>
 
-        <!-- 긴 박스 만드는 법 -->
-        <div style="height: 1000px"></div>
-        
+        <div style="height: 1000px">
+          <div class="temp-box">
+          </div>
+
+          <div class="main-bg">
+            <h4>Shirts on Sale</h4>
+            <button id="login" class="btn btn-danger">로그인</button>
+          </div>
+
+          <!-- *회원 약관 만드는 법  -->
+          <div class="lorem" style="width:200px; height: 100px; overflow-y: scroll">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed quasi aliquid vel eaque magni omnis repellendus error aliquam, nisi dolorem velit vitae animi debitis architecto dolor? Suscipit nihil voluptatibus saepe?</div>
+          
+        </div>
+
         <script>
+          // div의 스크롤바 내린 양 + 눈에보이는 div 높이 == div의 실제높이
+          $('.lorem').on('scroll', function(){
+            // 얼만큼 스크롤 했는지 알 수 있는 법
+            var 스크롤양 = document.querySelector('.lorem').scrollTop;
 
-          // 페이지 스크롤바 100이상 내리면 로고 폰트사이즈 줄이셈
+            // 눈에보이는 div 높이
+            var 높이 = document.querySelector('.lorem').clientHeight;
 
-          window.addEventListener('scroll', function(){
-            // console.log(1);
-            
-            // **얼만큼 스크롤 바를 내렸는지 알려줌
-            // console.log(window.scrollY);
-            // 같은 의미
-            // console.log(window.pageYOffset);
-
-            // **원하는 위치로 스크롤 강제 위치
-            // window.scrollTo(0, 100);
-            
-            // **현재 위치에서 100만큼 스크롤 해주세요.
-            window.scrollBy(0, 100);       
+            // 스크롤바 실제 높이 알려주는 법
+            var 실제높이 = document.querySelector('.lorem').scrollHeight;
+            console.log(스크롤양, 실제높이);
           });
-
-          //addEventListener jquery로 쓰는 법
-          $(window).on('scroll')
         </script>
-
+   
       </body>
 </html>

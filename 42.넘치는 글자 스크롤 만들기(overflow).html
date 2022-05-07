@@ -36,30 +36,20 @@
             </button>
           </div>
         </nav>
+        <div style="height: 1000px">
+          <div class="temp-box">
+          </div>
 
-        <!-- 긴 박스 만드는 법 -->
-        <div style="height: 1000px"></div>
-        
-        <script>
+          <div class="main-bg">
+            <h4>Shirts on Sale</h4>
+            <button id="login" class="btn btn-danger">로그인</button>
+          </div>
 
-          window.addEventListener('scroll', function(){
-            // console.log(1);
             
-            // **얼만큼 스크롤 바를 내렸는지 알려줌
-            // console.log(window.scrollY);
-            // 같은 의미
-            // console.log(window.pageYOffset);
-
-            // **원하는 위치로 스크롤 강제 위치
-            // window.scrollTo(0, 100);
-            
-            // **현재 위치에서 100만큼 스크롤 해주세요.
-            window.scrollBy(0, 100);       
-          });
-
-          //addEventListener jquery로 쓰는 법
-          $(window).on('scroll')
-        </script>
-
+          <!-- *회원 약관 만드는 법  -->
+          <!-- *overflow : 넘치는 글자를 스크롤 바로 만들어주세요. -->
+          <div style="width:200px; height: 100px; overflow-y: scroll">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed quasi aliquid vel eaque magni omnis repellendus error aliquam, nisi dolorem velit vitae animi debitis architecto dolor? Suscipit nihil voluptatibus saepe?</div>
+          
+        </div>
       </body>
 </html>
